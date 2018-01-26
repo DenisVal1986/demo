@@ -1,0 +1,13 @@
+<section class="blog" id="blog">
+    <div ng-repeat="item in blogItems">
+        <h2>{{item.title}}</h2>
+        <div>
+            <img src="{{item.cover}}" alt="{{item.title}}" class="left" />
+            <p>{{item.summary | dots:3}}
+                <a modal data-target="blog-{{$index}}">Читать дальше</a>
+            </p>
+            <div class="blog-content" id="blog-{{$index}}">{{item.content}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section>
